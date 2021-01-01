@@ -23,8 +23,8 @@ namespace DiagramDesigner
         }
         #endregion
 
-        public string componentName { get; set; }
-        public string componentDesc { get; set; }
+        public string primaryField { get; set; }
+        public string secondaryField { get; set; }
 
         #region ParentID
         public Guid ParentID
@@ -181,8 +181,8 @@ namespace DiagramDesigner
                                 DesignerItem.GetDragThumbTemplate(contentVisual) as ControlTemplate;
                             if (template != null)
                                 thumb.Template = template;
-                            (this.Template.FindName("lblComponentName", this) as Label).Content = componentName;
-                            (this.Template.FindName("lblComponentDesc", this) as Label).Content = componentDesc;
+                            (this.Template.FindName("lblComponentName", this) as Label).Content = primaryField;
+                            (this.Template.FindName("lblComponentDesc", this) as Label).Content = secondaryField;
                         }
                     }
                 }

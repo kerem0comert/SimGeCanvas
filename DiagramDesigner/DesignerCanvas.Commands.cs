@@ -822,7 +822,9 @@ namespace DiagramDesigner
                                                   new XElement("zIndex", Canvas.GetZIndex(item)),
                                                   new XElement("IsGroup", item.IsGroup),
                                                   new XElement("ParentID", item.ParentID),
-                                                  new XElement("Content", contentXaml)
+                                                  new XElement("Content", contentXaml),
+                                                  new XElement("PrimaryField", item.primaryField),
+                                                  new XElement("SecondaryField", item.secondaryField)
                                               )
                                    );
 
@@ -859,6 +861,8 @@ namespace DiagramDesigner
             Canvas.SetZIndex(item, Int32.Parse(itemXML.Element("zIndex").Value));
             Object content = XamlReader.Load(XmlReader.Create(new StringReader(itemXML.Element("Content").Value)));
             item.Content = content;
+            item.primaryField = itemXML.Element("PrimaryField").Value;
+            item.secondaryField = itemXML.Element("SecondaryField").Value;
             return item;
         }
 

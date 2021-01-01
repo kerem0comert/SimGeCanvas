@@ -87,8 +87,8 @@ namespace DiagramDesigner
                     newItem = new DesignerItem();
                     newItem.Content = content;
                     
-                    newItem.componentName = (Window.GetWindow(this) as Window1).tbComponentName.Text;
-                    newItem.componentDesc = (Window.GetWindow(this) as Window1).tbComponentDesc.Text;
+                    newItem.primaryField = (Window.GetWindow(this) as Window1).tbComponentName.Text;
+                    newItem.secondaryField = (Window.GetWindow(this) as Window1).tbComponentDesc.Text;
 
                     Point position = e.GetPosition(this);
 
