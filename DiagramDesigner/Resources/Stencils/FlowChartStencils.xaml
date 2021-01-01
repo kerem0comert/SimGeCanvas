@@ -379,7 +379,13 @@
       </Path>
 
       <Path Style="{StaticResource InternalStorage}" ToolTip="Class With Fields">
-        <s:DesignerItem.DragThumbTemplate>
+                <Path.Fill>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFFAFBE9" Offset="0"/>
+                        <GradientStop Color="WhiteSmoke" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+                <s:DesignerItem.DragThumbTemplate>
           <ControlTemplate>
             <Path Style="{StaticResource InternalStorage_DragThumb}"/>
           </ControlTemplate>
@@ -426,7 +432,7 @@
         </s:DesignerItem.ConnectorDecoratorTemplate>
       </Path>
 
-      <Path Style="{StaticResource Card}" ToolTip="Card">
+    <!--  <Path Style="{StaticResource Card}" ToolTip="Card">
         <s:DesignerItem.DragThumbTemplate>
           <ControlTemplate>
             <Path Style="{StaticResource Card_DragThumb}"/>
@@ -498,7 +504,7 @@
             <Path Style="{StaticResource OffPageReference_DragThumb}"/>
           </ControlTemplate>
         </s:DesignerItem.DragThumbTemplate>
-      </Path>
+      </Path>-->
 
     </ItemsControl.Items>
   </s:Toolbox>

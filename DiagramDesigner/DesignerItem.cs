@@ -23,8 +23,8 @@ namespace DiagramDesigner
         }
         #endregion
 
-        public string federateName { get; set; }
-        public string federateDesc { get; set; }
+        public string componentName { get; set; }
+        public string componentDesc { get; set; }
 
         #region ParentID
         public Guid ParentID
@@ -180,8 +180,8 @@ namespace DiagramDesigner
                                 DesignerItem.GetDragThumbTemplate(contentVisual) as ControlTemplate;
                             if (template != null)
                                 thumb.Template = template;
-                            //(this.Template.FindName("lblFederateName", this) as Label).Content = "da";
-                            //(this.Template.FindName("lblFederateDesc", this) as Label).Content = "ads";
+                            (this.Template.FindName("lblComponentName", this) as Label).Content = componentName;
+                            (this.Template.FindName("lblComponentDesc", this) as Label).Content = componentDesc;
                         }
                     }
                 }

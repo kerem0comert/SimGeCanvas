@@ -34,11 +34,11 @@
             <!-- Toolbox -->
             <StackPanel Grid.Column="0" Margin="0,0,5,0">
                 <Expander Header="Federates" Content="{StaticResource FlowChartStencils}" IsExpanded="True"/>
-                <Label Content="Federate Name"/>
-                <TextBox Height="23" TextWrapping="Wrap" x:Name="tbFederateName" Text="" TextChanged="TextBox_TextChanged"/>
-                <Label Margin="0,30,0,0" Content="Federate Description"/>
-                <TextBox Height="50" TextWrapping="Wrap" x:Name="tbFederateDesc" Text="" TextChanged="TextBox_TextChanged"/>
-                <Button Margin="0,30,0,0" Content="Add Federate" x:Name="bAddFederate" Click="bAddFederate_Click"/>
+                <Label Content="Component Name"/>
+                <TextBox Height="23" TextWrapping="Wrap" x:Name="tbComponentName" Text="" TextChanged="TextBox_TextChanged"/>
+                <Label Margin="0,30,0,0" Content="Description (Fields, Attributes etc.)"/>
+                <TextBox Height="50" TextWrapping="Wrap" x:Name="tbComponentDesc" Text="" TextChanged="TextBox_TextChanged"/>
+              
             </StackPanel>
             <!-- GridSplitter -->
             <GridSplitter Focusable="False" Width="2" Background="LightGray"

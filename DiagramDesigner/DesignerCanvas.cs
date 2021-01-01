@@ -74,6 +74,7 @@ namespace DiagramDesigner
         protected override void OnDrop(DragEventArgs e)
         {
             base.OnDrop(e);
+            Console.WriteLine("Dropped");
             DragObject dragObject = e.Data.GetData(typeof(DragObject)) as DragObject;
             if (dragObject != null && !String.IsNullOrEmpty(dragObject.Xaml))
             {
@@ -84,7 +85,9 @@ namespace DiagramDesigner
                 {
                     newItem = new DesignerItem();
                     newItem.Content = content;
-
+                    newItem.componentName = "name";
+                    newItem.componentDesc = "desc";
+                    
                     Point position = e.GetPosition(this);
 
                     if (dragObject.DesiredSize.HasValue)

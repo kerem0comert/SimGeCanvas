@@ -8,7 +8,7 @@ namespace DiagramDesigner
         public Window1()
         {
             InitializeComponent();
-            tbFederateName.Text = "adfads ";
+            //tbFederateName.Text = "adfads ";
         }
 
         private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
@@ -19,8 +19,8 @@ namespace DiagramDesigner
         private void bAddFederate_Click(object sender, RoutedEventArgs e)
         {
 
-            string federateName = tbFederateName.Text;
-            string federateDesc = tbFederateDesc.Text;
+            string componentName = tbComponentName.Text;
+            string componentDesc = tbComponentDesc.Text;
            
        
 
