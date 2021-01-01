@@ -13,6 +13,8 @@ namespace DiagramDesigner
     [TemplatePart(Name = "PART_ConnectorDecorator", Type = typeof(Control))]
     [TemplatePart(Name = "PART_ContentPresenter", Type = typeof(ContentPresenter))]
     [TemplatePart(Name = "PART_FederateName", Type = typeof(Label))]
+    [TemplatePart(Name = "lblComponentName", Type = typeof(Label))]
+    [TemplatePart(Name = "lblComponentDesc", Type = typeof(Label))]
     public class DesignerItem : ContentControl, ISelectable, IGroupable
     {
         #region ID
@@ -138,8 +140,8 @@ namespace DiagramDesigner
             base.OnPreviewMouseDown(e);
             Console.WriteLine("DesignerItem selected.");
             Window1 w = (Window.GetWindow(this) as Window1);
-            w.tbComponentName.Text = this.secondaryField;
-            w.tbComponentDesc.Text = this.primaryField;
+            w.tbComponentName.Text = this.primaryField;
+            w.tbComponentDesc.Text = this.secondaryField;
             DesignerCanvas designer = VisualTreeHelper.GetParent(this) as DesignerCanvas;
 
             // update selection

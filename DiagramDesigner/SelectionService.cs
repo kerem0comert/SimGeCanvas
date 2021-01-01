@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Controls;
 
 namespace DiagramDesigner
 {
@@ -72,14 +71,8 @@ namespace DiagramDesigner
 
         internal void ClearSelection()
         {
-            Console.WriteLine("Clearing selection");
-            foreach(DesignerItem d in CurrentSelection)
-            {
-                d.IsSelected = false;
-            
-            }
+            CurrentSelection.ForEach(item => item.IsSelected = false);
             CurrentSelection.Clear();
-            
         }
 
         internal void SelectAll()

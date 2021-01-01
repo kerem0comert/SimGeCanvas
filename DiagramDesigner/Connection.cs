@@ -262,6 +262,8 @@ namespace DiagramDesigner
         {
             base.OnMouseDown(e);
             // usual selection business
+            Window1 w = (Window.GetWindow(this) as Window1);
+            w.tbConnectorDesc.Text = this.connectionText;
             DesignerCanvas designer = VisualTreeHelper.GetParent(this) as DesignerCanvas;
             if (designer != null)
             {

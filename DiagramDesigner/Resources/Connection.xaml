@@ -113,8 +113,10 @@
                         </Grid>
 
                         <!--Uncomment this to show default label text-->
-                        <TextBlock Width="100" Height="35"
+                        <TextBlock x:Name="textBlockConnection" Width="100" Height="35"
                                        Text="{Binding Path=(s:Connection.connectionText)}" 
+                                        FontSize="16"
+                                        FontWeight="Bold"
                                        Canvas.Left="{Binding LabelPosition.X}"
                                        Canvas.Top="{Binding LabelPosition.Y}">
                             <TextBlock.RenderTransform>
