@@ -36,9 +36,21 @@
                 <Expander Header="Components" Content="{StaticResource FlowChartStencils}" IsExpanded="True"/>
                 <Label Content="Primary Field (Title, Class Name)"/>
                 <TextBox Height="23" TextWrapping="Wrap" x:Name="tbComponentName" Text="" TextChanged="TextBox_TextChanged"/>
-                <Label Margin="0,30,0,0" Content="Secondary Field (Description, Attributes)"/>
-                <TextBox Height="147" TextWrapping="Wrap" x:Name="tbComponentDesc" Text="" AcceptsReturn="True" TextChanged="TextBox_TextChanged"/>
-              
+                <Label Margin="0,10,0,0" Content="Secondary Field (Description, Attributes)"/>
+                <TextBox Height="100" TextWrapping="Wrap" x:Name="tbComponentDesc" Text="" AcceptsReturn="True" TextChanged="TextBox_TextChanged"/>
+                <Label Margin="0,10,0,0" Content="Connector Line Text (Multiplicity)"/>
+                <TextBox Height="20" TextWrapping="Wrap" x:Name="tbConnectorDesc" Text="" AcceptsReturn="True" TextChanged="TextBox_TextChanged"/>
+
+                <Label Margin="10,0,0,0" Content="Connector Start"/>
+                <RadioButton Margin="10,0,0,0" x:Name="rbStartNone" Content="None" IsChecked="True" GroupName="RadioStart"/>
+                <RadioButton Margin="10,0,0,0" x:Name="rbStartArrow" Content="Arrow"  GroupName="RadioStart"/>
+                <RadioButton Margin="10,0,0,0" x:Name="rbStartDiamond" Content="Diamond"  GroupName="RadioStart"/>
+
+                <Label Margin="10,5,0,0" Content="Connector End"/>
+                <RadioButton Margin="10,0,0,0" x:Name="rbEndNone" Content="None" IsChecked="True"  GroupName="RadioEnd"/>
+                <RadioButton Margin="10,0,0,0"  x:Name="rbEndArrow" Content="Arrow" GroupName="RadioEnd" />
+                <RadioButton Margin="10,0,0,0"  x:Name="rbEndDiamond" Content="Diamond" GroupName="RadioEnd"/>
+
             </StackPanel>
             <!-- GridSplitter -->
             <GridSplitter Focusable="False" Width="2" Background="LightGray"

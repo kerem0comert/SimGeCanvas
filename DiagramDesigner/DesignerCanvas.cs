@@ -14,8 +14,6 @@ namespace DiagramDesigner
     public partial class DesignerCanvas : Canvas
     {
 
-        public string componentName { get; set; }
-        public string componentDesc { get; set; }
         private Point? rubberbandSelectionStartPoint = null;
 
         private SelectionService selectionService;

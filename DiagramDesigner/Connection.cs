@@ -157,7 +157,11 @@ namespace DiagramDesigner
         private ArrowSymbol sourceArrowSymbol = ArrowSymbol.None;
         public ArrowSymbol SourceArrowSymbol
         {
-            get { return sourceArrowSymbol; }
+            get {
+                if ((bool)(Window.GetWindow(this) as Window1).rbStartArrow.IsChecked) return ArrowSymbol.Arrow;
+                else if ((bool)(Window.GetWindow(this) as Window1).rbStartDiamond.IsChecked) return ArrowSymbol.Diamond;
+                else return ArrowSymbol.None;
+            }
             set
             {
                 if (sourceArrowSymbol != value)
@@ -168,10 +172,15 @@ namespace DiagramDesigner
             }
         }
 
-        public ArrowSymbol sinkArrowSymbol = ArrowSymbol.Arrow;
+        public ArrowSymbol sinkArrowSymbol;
+
         public ArrowSymbol SinkArrowSymbol
         {
-            get { return sinkArrowSymbol; }
+            get {
+                if ((bool)(Window.GetWindow(this) as Window1).rbEndArrow.IsChecked) return ArrowSymbol.Arrow;
+                else if ((bool)(Window.GetWindow(this) as Window1).rbEndDiamond.IsChecked) return ArrowSymbol.Diamond;
+                else return ArrowSymbol.None;
+            }
             set
             {
                 if (sinkArrowSymbol != value)

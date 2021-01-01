@@ -5,8 +5,7 @@ namespace DiagramDesigner
 {
     public partial class Window1 : Window
     {
-        public string componentName { get; set; }
-        public string componentDesc { get; set; }
+ 
 
         public Window1()
         {
