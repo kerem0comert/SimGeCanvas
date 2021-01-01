@@ -150,6 +150,7 @@ namespace DiagramDesigner
                     else
                     {
                         designer.SelectionService.AddToSelection(this);
+
                     }
                 else if (!this.IsSelected)
                 {

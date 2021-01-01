@@ -13,6 +13,9 @@ namespace DiagramDesigner
 {
     public partial class DesignerCanvas : Canvas
     {
+
+        public string componentName { get; set; }
+        public string componentDesc { get; set; }
         private Point? rubberbandSelectionStartPoint = null;
 
         private SelectionService selectionService;
@@ -85,9 +88,10 @@ namespace DiagramDesigner
                 {
                     newItem = new DesignerItem();
                     newItem.Content = content;
-                    newItem.componentName = "name";
-                    newItem.componentDesc = "desc";
                     
+                    newItem.componentName = (Window.GetWindow(this) as Window1).tbComponentName.Text;
+                    newItem.componentDesc = (Window.GetWindow(this) as Window1).tbComponentDesc.Text;
+
                     Point position = e.GetPosition(this);
 
                     if (dragObject.DesiredSize.HasValue)
@@ -115,6 +119,7 @@ namespace DiagramDesigner
                 }
 
                 e.Handled = true;
+                Console.WriteLine("handled creation");
             }
             
         }
