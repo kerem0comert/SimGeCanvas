@@ -157,11 +157,10 @@
                         <Control x:Name="PART_ConnectorDecorator"
                                  Visibility="Hidden"
                                  Template="{StaticResource ConnectorDecoratorTemplate}"></Control>
-                       <Label Margin="0,0,0,0" 
-                              Template="{StaticResource }"
-                              x:Name="PART_FederateName" 
-                              Content="Federate Name"/>
-                      <!--  <Label Margin="0,20,0,0" x:Name="lblFederateDesc" Content="Federate Description"/>-->
+                        <StackPanel Orientation="Horizontal">
+                            <Label Margin="0,20,0,0" x:Name="lblFederateDesc" Content="Federate Description"/>
+                        </StackPanel>
+                        <!--  <Label Margin="0,20,0,0" x:Name="lblFederateDesc" Content="Federate Description"/>-->
 
                     </Grid>
                     <ControlTemplate.Triggers>

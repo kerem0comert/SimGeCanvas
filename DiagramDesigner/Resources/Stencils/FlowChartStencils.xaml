@@ -116,7 +116,7 @@
 
   <!-- InternalStorage -->
   <Style x:Key="InternalStorage" TargetType="Path" BasedOn="{StaticResource FlowChartItemStyle}">
-    <Setter Property="Data" Value="M 0,10 H 60 M 10,0 V 40 M 0,0 H 60 V 40 H 0 Z"/>
+        <Setter Property="Data" Value="M 2 8 L 2 12 L 10 12 L 10 8 L 2 8 M 2 9 L 10 9"/>
   </Style>
 
   <Style x:Key="InternalStorage_DragThumb" TargetType="Path" BasedOn="{StaticResource InternalStorage}">
@@ -378,7 +378,7 @@
         </s:DesignerItem.ConnectorDecoratorTemplate>
       </Path>
 
-      <Path Style="{StaticResource InternalStorage}" ToolTip="Internal Storage">
+      <Path Style="{StaticResource InternalStorage}" ToolTip="Class With Fields">
         <s:DesignerItem.DragThumbTemplate>
           <ControlTemplate>
             <Path Style="{StaticResource InternalStorage_DragThumb}"/>
@@ -395,7 +395,13 @@
       </Path>
 
       <Path Style="{StaticResource DirectData}" ToolTip="Direct Data">
-        <s:DesignerItem.DragThumbTemplate>
+                <Path.Fill>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFFAFBE9" Offset="0"/>
+                        <GradientStop Color="#FF6E8EF9" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+                <s:DesignerItem.DragThumbTemplate>
           <ControlTemplate>
             <Path Style="{StaticResource DirectData_DragThumb}"/>
           </ControlTemplate>
