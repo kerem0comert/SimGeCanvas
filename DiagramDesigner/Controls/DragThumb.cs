@@ -21,7 +21,6 @@ namespace DiagramDesigner.Controls
             {
                 double minLeft = double.MaxValue;
                 double minTop = double.MaxValue;
-                Console.WriteLine("drag me baby");
                 // we only move DesignerItems
                 var designerItems = designer.SelectionService.CurrentSelection.OfType<DesignerItem>();
 

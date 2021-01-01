@@ -12,10 +12,12 @@ namespace DiagramDesigner
     public class Connection : Control, ISelectable, INotifyPropertyChanged
     {
         private Adorner connectionAdorner;
+        
 
         #region Properties
 
         public Guid ID { get; set; }
+        public string connectionText { get; set; } = "aa";
 
         // source connector
         private Connector source;
@@ -55,6 +57,7 @@ namespace DiagramDesigner
             get { return sink; }
             set
             {
+                Console.WriteLine("fire sink");
                 if (sink != value)
                 {
                     if (sink != null)
@@ -198,6 +201,7 @@ namespace DiagramDesigner
             get { return labelPosition; }
             set
             {
+                
                 if (labelPosition != value)
                 {
                     labelPosition = value;
@@ -244,11 +248,12 @@ namespace DiagramDesigner
 
         #endregion
 
-        public Connection(Connector source, Connector sink)
+        public Connection(Connector source, Connector sink, string connectionText)
         {
             this.ID = Guid.NewGuid();
             this.Source = source;
             this.Sink = sink;
+            this.connectionText = connectionText;
             base.Unloaded += new RoutedEventHandler(Connection_Unloaded);
         }
 
@@ -256,7 +261,6 @@ namespace DiagramDesigner
         protected override void OnMouseDown(System.Windows.Input.MouseButtonEventArgs e)
         {
             base.OnMouseDown(e);
-
             // usual selection business
             DesignerCanvas designer = VisualTreeHelper.GetParent(this) as DesignerCanvas;
             if (designer != null)

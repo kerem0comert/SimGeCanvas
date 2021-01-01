@@ -105,11 +105,12 @@ namespace DiagramDesigner
 
                 String sourceConnectorName = connectionXML.Element("SourceConnectorName").Value;
                 String sinkConnectorName = connectionXML.Element("SinkConnectorName").Value;
+                String connectionText = connectionXML.Element("ConnectionText").Value;
 
                 Connector sourceConnector = GetConnector(sourceID, sourceConnectorName);
                 Connector sinkConnector = GetConnector(sinkID, sinkConnectorName);
 
-                Connection connection = new Connection(sourceConnector, sinkConnector);
+                Connection connection = new Connection(sourceConnector, sinkConnector, connectionText);
                 Canvas.SetZIndex(connection, Int32.Parse(connectionXML.Element("zIndex").Value));
                 this.Children.Add(connection);
             }
@@ -225,11 +226,12 @@ namespace DiagramDesigner
 
                     String sourceConnectorName = connectionXML.Element("SourceConnectorName").Value;
                     String sinkConnectorName = connectionXML.Element("SinkConnectorName").Value;
+                    string connectionText = connectionXML.Element("ConnectionText").Value;
 
                     Connector sourceConnector = GetConnector(newSourceID, sourceConnectorName);
                     Connector sinkConnector = GetConnector(newSinkID, sinkConnectorName);
 
-                    Connection connection = new Connection(sourceConnector, sinkConnector);
+                    Connection connection = new Connection(sourceConnector, sinkConnector, connectionText);
                     Canvas.SetZIndex(connection, Int32.Parse(connectionXML.Element("zIndex").Value));
                     this.Children.Add(connection);
 
@@ -842,7 +844,8 @@ namespace DiagramDesigner
                                       new XElement("SinkConnectorName", connection.Sink.Name),
                                       new XElement("SourceArrowSymbol", connection.SourceArrowSymbol),
                                       new XElement("SinkArrowSymbol", connection.SinkArrowSymbol),
-                                      new XElement("zIndex", Canvas.GetZIndex(connection))
+                                      new XElement("zIndex", Canvas.GetZIndex(connection)),
+                                      new XElement("ConnectionText", connection.connectionText)
                                      )
                                   );
 

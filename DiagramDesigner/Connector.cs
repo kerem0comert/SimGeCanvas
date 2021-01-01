@@ -77,6 +77,7 @@ namespace DiagramDesigner
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
         {
+            Console.WriteLine("mouseleft down");
             base.OnMouseLeftButtonDown(e);
             DesignerCanvas canvas = GetDesignerCanvas(this);
             if (canvas != null)

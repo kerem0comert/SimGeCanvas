@@ -103,7 +103,7 @@ namespace DiagramDesigner
 
         void thumbDragThumb_DragCompleted(object sender, DragCompletedEventArgs e)
         {
-            Console.Write("Drag completed");
+
             if (HitConnector != null)
             {
                 if (connection != null)

@@ -62,8 +62,8 @@ namespace DiagramDesigner
             {
                 Connector sourceConnector = this.sourceConnector;
                 Connector sinkConnector = this.HitConnector;
-                Connection newConnection = new Connection(sourceConnector, sinkConnector);
-
+                Connection newConnection = new Connection(sourceConnector, sinkConnector,
+                    (Window.GetWindow(this) as Window1).tbConnectorDesc.Text);
                 Canvas.SetZIndex(newConnection, designerCanvas.Children.Count);
                 this.designerCanvas.Children.Add(newConnection);
                 
