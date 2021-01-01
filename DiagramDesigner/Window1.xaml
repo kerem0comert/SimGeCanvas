@@ -50,6 +50,7 @@
                 <RadioButton Margin="10,0,0,0" x:Name="rbEndNone" Content="None" IsChecked="True"  GroupName="RadioEnd"/>
                 <RadioButton Margin="10,0,0,0"  x:Name="rbEndArrow" Content="Arrow" GroupName="RadioEnd" />
                 <RadioButton Margin="10,0,0,0"  x:Name="rbEndDiamond" Content="Diamond" GroupName="RadioEnd"/>
+                <Button Margin="10,10,10,10" Content="Update" x:Name="bUpdate" Click="bUpdate_Click"/>
 
             </StackPanel>
             <!-- GridSplitter -->

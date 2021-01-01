@@ -136,7 +136,10 @@ namespace DiagramDesigner
         protected override void OnPreviewMouseDown(MouseButtonEventArgs e)
         {
             base.OnPreviewMouseDown(e);
-            Console.Write("true");
+            Console.WriteLine("DesignerItem selected.");
+            Window1 w = (Window.GetWindow(this) as Window1);
+            w.tbComponentName.Text = this.secondaryField;
+            w.tbComponentDesc.Text = this.primaryField;
             DesignerCanvas designer = VisualTreeHelper.GetParent(this) as DesignerCanvas;
 
             // update selection

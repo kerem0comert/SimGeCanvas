@@ -41,6 +41,12 @@ namespace DiagramDesigner
                 // if you click directly on the canvas all 
                 // selected items are 'de-selected'
                 SelectionService.ClearSelection();
+                (Window.GetWindow(this) as Window1).tbComponentName.Text = "";
+                (Window.GetWindow(this) as Window1).tbComponentDesc.Text = "";
+                (Window.GetWindow(this) as Window1).tbConnectorDesc.Text = "";
+                (Window.GetWindow(this) as Window1).rbStartNone.IsChecked = true;
+                (Window.GetWindow(this) as Window1).rbEndNone.IsChecked = true;
+
                 Focus();
                 e.Handled = true;
             }
