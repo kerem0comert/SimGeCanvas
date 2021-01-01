@@ -34,9 +34,9 @@
             <!-- Toolbox -->
             <StackPanel Grid.Column="0" Margin="0,0,5,0">
                 <Expander Header="Components" Content="{StaticResource FlowChartStencils}" IsExpanded="True"/>
-                <Label Content="Component Name"/>
+                <Label Content="Primary Field (Title, Class Name)"/>
                 <TextBox Height="23" TextWrapping="Wrap" x:Name="tbComponentName" Text="" TextChanged="TextBox_TextChanged"/>
-                <Label Margin="0,30,0,0" Content="Description (Fields, Attributes etc.)"/>
+                <Label Margin="0,30,0,0" Content="Secondary Field (Description, Attributes)"/>
                 <TextBox Height="147" TextWrapping="Wrap" x:Name="tbComponentDesc" Text="" AcceptsReturn="True" TextChanged="TextBox_TextChanged"/>
               
             </StackPanel>

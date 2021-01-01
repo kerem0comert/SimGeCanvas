@@ -158,8 +158,8 @@
                                  Visibility="Hidden"
                                  Template="{StaticResource ConnectorDecoratorTemplate}"></Control>
                         <StackPanel Orientation="Vertical">
-                            <Label Margin="0,20,0,0" x:Name="lblComponentName" />
-                            <Label Margin="0,20,0,0" x:Name="lblComponentDesc" />
+                            <Label Margin="8,8,0,0" x:Name="lblComponentName" FontSize="15" FontWeight="Bold"/>
+                            <Label Margin="8,20,0,0" x:Name="lblComponentDesc" FontSize="15"/>
                         </StackPanel>
                         <!--  <Label Margin="0,20,0,0" x:Name="lblFederateDesc" Content="Federate Description"/>-->
 

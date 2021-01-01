@@ -44,7 +44,7 @@ namespace DiagramDesigner
                 if (panel != null)
                 {
                     // desired size for DesignerCanvas is the stretched Toolbox item size
-                    double scale = 2;
+                    double scale = 2.4;
                     dataObject.DesiredSize = new Size(panel.ItemWidth * scale, panel.ItemHeight * scale);
                 }
 

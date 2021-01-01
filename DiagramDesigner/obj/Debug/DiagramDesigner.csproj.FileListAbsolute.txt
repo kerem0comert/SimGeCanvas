@@ -56,7 +56,6 @@ C:\Users\kerem\Desktop\SEMESTER\1531-DistSim\DiagramDesigners\MyPart4DiagramDesi
 C:\Users\kerem\Desktop\SEMESTER\1531-DistSim\DiagramDesigners\MyPart4DiagramDesigner\DiagramDesigner\obj\Debug\DiagramDesigner.pdb
 C:\Users\kerem\Desktop\SEMESTER\1531-DistSim\SimGeCanvas\MyPart4DiagramDesigner\DiagramDesigner\bin\Debug\DiagramDesigner.exe
 C:\Users\kerem\Desktop\SEMESTER\1531-DistSim\SimGeCanvas\MyPart4DiagramDesigner\DiagramDesigner\bin\Debug\DiagramDesigner.pdb
-C:\Users\kerem\Desktop\SEMESTER\1531-DistSim\SimGeCanvas\MyPart4DiagramDesigner\DiagramDesigner\obj\Debug\DiagramDesigner.csprojAssemblyReference.cache
 C:\Users\kerem\Desktop\SEMESTER\1531-DistSim\SimGeCanvas\MyPart4DiagramDesigner\DiagramDesigner\obj\Debug\Resources\Styles\Expander.baml
 C:\Users\kerem\Desktop\SEMESTER\1531-DistSim\SimGeCanvas\MyPart4DiagramDesigner\DiagramDesigner\obj\Debug\Resources\Styles\GroupBox.baml
 C:\Users\kerem\Desktop\SEMESTER\1531-DistSim\SimGeCanvas\MyPart4DiagramDesigner\DiagramDesigner\obj\Debug\Resources\Styles\ScrollBar.baml
