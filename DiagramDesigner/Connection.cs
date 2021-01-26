@@ -17,7 +17,7 @@ namespace DiagramDesigner
         #region Properties
 
         public Guid ID { get; set; }
-        public string connectionText { get; set; } = "aa";
+        public string connectionText { get; set; }
 
         // source connector
         private Connector source;
